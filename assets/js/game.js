@@ -122,6 +122,11 @@ var startGame = function() {
 
             console.log(enemyHealth);
 
+            // Reset the enemy attack to be a random number between 10 and 14
+            enemyAttack = randomNumber(10, 14);
+
+            console.log(enemyAttack);
+
             // Run the fight function
             fight(pickedEnemyName);
 
