@@ -72,9 +72,23 @@ var fight = function(enemy) {
     }
 };
 
+// Function to set player name
+var getPlayerName = function() {
+    // Initialize name as an empty string
+    var name = "";
+
+    // Loop with prompt to get a valid player name
+    while (name === "" || name === null) {
+        name = prompt("What is your robot's name?");
+    }
+    console.log("Your robot's name is " + name);
+    return name;
+};
+
+
 // Player is prompted for their robot's name. Initial values set for the player's health and attack stats and their money.
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
