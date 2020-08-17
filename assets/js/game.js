@@ -224,7 +224,7 @@ var endGame = function() {
     // restart the game if player selects OK
         startGame();
     }
-    // print goodbye message if play does not select OK
+    // print goodbye message if player does not select OK
     else {
         window.alert("Thank you for playing Robot Gladiators! Come back soon!")
     }
@@ -234,24 +234,24 @@ var endGame = function() {
 var shop = function() {
     // Ask the player what they'd like to do
     var shopOptionPrompt = window.prompt(
-        "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice."
+        "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
     );
 
-    // A switch will carry out the action.  Fall-through is used to account for variation in player input.
+    // Convert the input from a string to an integer
+    shopOptionPrompt = parseInt(shopOptionPrompt);
+
+    // A switch will carry out the action.  Integer values are used to select the desired option.
     switch (shopOptionPrompt) {
         // REFILL health
-        case "REFILL":
-        case "refill":
+        case 1:
             playerInfo.refillHealth();
             break;
         // UPGRADE attack
-        case "UPGRADE":
-        case "upgrade":
+        case 2:
             playerInfo.upgradeAttack();
             break;
         // LEAVE
-        case "LEAVE":
-        case "leave":
+        case 3:
             window.alert("Leaving the store");
             // Exit the function
             break;
