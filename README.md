@@ -7,4 +7,4 @@ This page hosts a simple javascript robot gladiator game.  The game is initializ
 This page is hosted at https://kpehl.github.io/robot-gladiators/ 
 
 ## Screenshot
-![screenshot](./assets/images/PasswordGeneratorScreenshot.png)
+![screenshot](https://github.com/kpehl/robot-gladiators/blob/master/assets/images/RobotGladiatorsScreenshot.png)
